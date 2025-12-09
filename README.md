@@ -27,14 +27,60 @@ In timing diagram Q0 is changing as soon as the negative edge of clock pulse is 
 /* write all the steps invloved */
 
 **PROGRAM**
+module asynchronouscounter
+input clk,
+clock input
+);
+input reset,
+output [3:0]
+asynchronous
+4-bit output
+reset
+// Internal flip-flop register
+reg [3:e] qreg;
+// output assignment
+assign q = q_reg;
+// FFe toggles with external clock
+always e(posedge clk or posedge reset)
+if(reset)
+begin
+end
+else
+q_reg[e] <= 1'be;
+qreg[e] <= q_reg[e];
+// FF1 toggles with Qo
+always @(posedge q reg[e] or posedge reset) begin
+if (reset)
+end
+else
+q_reg[1] <= 1'be;
+q_reg[1] <= q_reg[1];
+// FF2 toggles with 01
+always @(posedge q reg[1] or posedge reset) begin
+if(reset)
+end
+else
+q_reg[2] <= 1'be;
+q_reg[2] <= q_reg[2];
+// FF3 toggles with Q2
+always @(posedge q reg[2] or posedge reset) begin
+if(reset)
+end
+else
+q_reg[3]<= 1'be;
+q_reg[3] <= ~q_reg[3];
+endmodule
 
-/* Program for 4 Bit Ripple Counter and verify its truth table in quartus using Verilog programming.
+ Developed by:Farzana Mubarak RegisterNumber:25013772
 
- Developed by: RegisterNumber:
-*/
 
-**RTL LOGIC FOR 4 Bit Ripple Counter**
+**RTL LOGIC FOR 4 Bit Ripple Counter**  
+
+<img width="631" height="774" alt="Screenshot 2025-12-09 215344" src="https://github.com/user-attachments/assets/4460ef9a-552d-4407-b822-eca9024e2ee9" />
 
 **TIMING DIGRAMS FOR 4 Bit Ripple Counter**
 
+<img width="768" height="404" alt="Screenshot 2025-12-09 215402" src="https://github.com/user-attachments/assets/663049b5-aff4-4e75-8025-18376f340f6f" />
+
 **RESULTS**
+Thus 4 BIT-RIPPLE COUNTER is verified successfully
